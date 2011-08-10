@@ -1,0 +1,55 @@
+{
+    "name": "rats",
+    "version": "0.0.1",
+    "description": "rats - Realtime Analytics Tracking System",
+    "homepage": "https://github.com/scopely/rats",
+    "keywords": [
+        "scopely",
+        "node",
+        "analytics",
+        "realtime"
+    ],
+    "contributors": [
+        {
+            "name": "Ankur Bulsara",
+            "email": "ankur@scopely.com",
+            "web": "http://ankur.org"
+        },
+        {
+            "name": "Gabriel Teoduru",
+            "email": "gabriel@scopely.com"
+        },
+        {
+            "name": "E.J. Coughlin",
+            "email": "ej@scopely.com"
+        }
+    ],
+    "maintainers":[
+        {
+            "name": "Ankur Bulsara",
+            "email": "ankur@scopely.com",
+            "web": "http://ankur.org"
+        },
+        {
+            "name": "Gabriel Teoduru",
+            "email": "gabriel@scopely.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://hyperlight@github.com/scopely/rats.git"
+        }
+    ],
+    "engines": {
+        "node": ">= 0.4.10"
+    },
+    "dependencies": {
+        "hiredis": ">=0.1.12",
+        "redis": ">=0.6.7",
+        "async": ">=0.1.9",
+        "express": ">=2.4.4",
+        "nodeunit": ">=0.5.3",
+        "socket.io": ">=0.7.8"
+    }
+}
