@@ -1,6 +1,7 @@
 async = require 'async'
 url = require 'url'
 EventSink = require('./../sinks/event_sink').EventSink
+require('./../core/extensions')
 
 # AB: todo - batch events
 # AB: todo - use event emitter to decouple / async the process of event buffering from the listener
@@ -32,6 +33,10 @@ class EventBuffer
   @buffer: (data) ->
     task = {data: data, time: new Date()}
     if (data + '').length > 1
+      # todo - need to debug this code. it might be aggressively adding ? and /
+      data = '/' + data if data[0] == '?'
+      data = '/?' + data if data[0] != '/'
+      #console.log "#{data}"
       @processedCount += 1
       if @processedCount % @sampleSize == 0
         newSampleTime = new Date()

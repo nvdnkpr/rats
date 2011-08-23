@@ -8,7 +8,7 @@ class UdpSource
   listen: ->
     console.log "[UDP] listening on port #{@port}"
     server = dgram.createSocket('udp4', (msg, msgInfo) ->
-      #console.log "[UDP] Received msg: #{msg}, msgInfo: #{msgInfo}"
+      console.log "[UDP] Received msg: #{msg}, msgInfo: #{msgInfo}"
       EventBuffer.buffer msg.toString()
     )
     server.bind @port

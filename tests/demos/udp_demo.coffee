@@ -19,11 +19,16 @@ class UdpDemo
 
 
 
-
 setInterval( () ->
-  UdpDemo.testRandomMultiUdpSend ['/?e=popchat/wallpost/tf/clicked', '/?e=popchat/wallpost/mf/clicked', '/?e=popchat/wallpost/yn/clicked', '/?e=popchat/wallpost/rt/clicked']
+  UdpDemo.testMultiUdpSend ['/?e=popchat/wallpost/tf/clicked', '/?e=popchat/wallpost/mf/clicked', 'e=popchat/wallpost/yn/clicked', 'e=popchat/wallpost/rt/clicked']
  , 100
 )
+
+
+#setInterval( () ->
+#  UdpDemo.testRandomMultiUdpSend ['/?e=popchat/wallpost/tf/clicked', '/?e=popchat/wallpost/mf/clicked', '/?e=popchat/wallpost/yn/clicked', '/?e=popchat/wallpost/rt/clicked']
+# , 100
+#)
 
 #setInterval( () ->
 #  UdpDemo.testMultiUdpSend ['/?e=popchat/wallpost/tf/clicked', '/?e=popchat/wallpost/mf/clicked', '/?e=popchat/wallpost/yn/clicked', '/?e=popchat/wallpost/rt/clicked']
