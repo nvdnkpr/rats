@@ -1,7 +1,7 @@
 
 $(document).ready () ->
 
-  rManager = new RManager('http://' + document.location.host, 3030, $('#data'))
+  rManager = new RManager('http://' + document.location.hostname, 3030, $('#data'))
   rManager.start()
 
   $('#type_past').click( () ->
