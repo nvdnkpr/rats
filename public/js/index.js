@@ -1,7 +1,7 @@
 (function() {
   $(document).ready(function() {
     var rManager;
-    rManager = new RManager('http://localhost', 3030, $('#data'));
+    rManager = new RManager('http://' + document.location.host, 3030, $('#data'));
     rManager.start();
     $('#type_past').click(function() {
       return rManager.changeType(RView.VIEW_HISTORICAL);
